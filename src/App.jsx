@@ -9,6 +9,7 @@ const App = () => {
       <Header />
       <Button>Sort By Date</Button>
       <Card/>
+      <Button>See More</Button>
 
     </>
   );
