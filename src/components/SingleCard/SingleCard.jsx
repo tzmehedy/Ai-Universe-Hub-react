@@ -37,7 +37,6 @@ const SingleCard = (props) => {
                                 </svg>
                             </span>
 
-
                         </div>
                     </div>
 
