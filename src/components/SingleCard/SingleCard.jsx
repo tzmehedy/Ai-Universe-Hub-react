@@ -1,13 +1,8 @@
 import React from 'react';
 
 const SingleCard = (props) => {
-    // console.log(props);
-    const {id,image, features, name, published_in} = props.singleData;
-    // console.log(props.setHandleId);
-    // const uniqId = (id,setHandleId)=>{
-    //     document.getElementById('my_modal_4').showModal();
-    //     setHandleId(id);
-    // }
+    const {id,image, features, name, published_in} = props?.singleData;
+  
     
     return (
         <div>
@@ -35,13 +30,11 @@ const SingleCard = (props) => {
                             <p className='ml-2'>{published_in}</p>
                         </div>
                         <div>
-                            <button className="btn" onClick={()=> document.getElementById('my_modal_4').showModal() || props.setHandleId(id)}>
+                            <button className="btn" onClick={()=> document.getElementById('my_modal_4').showModal() || props?.setHandleId(id)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                                 </svg>
                             </button>
-                            {/* <button className="btn" onClick={()=>document.getElementById('my_modal_4').showModal()}>open modal</button> */}
-
                         </div>
                     </div>
 

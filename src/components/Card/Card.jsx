@@ -5,13 +5,11 @@ import Modal from '../Modal/Modal';
 
 const Card = () => {
     const [data,setData] = useState([]);
+    const [modalData,setModalData] = useState({});
     const [showAll,setShowAll] = useState(false);
     const [handleId,setHandleId] = useState(null);
-    const [modalData,setModalData] = useState({});
-    console.log(handleId);
-
-
     
+   
     const handleShowAll = () => {
         setShowAll(true);
     }
@@ -27,7 +25,7 @@ const Card = () => {
     useEffect(()=>{
         fetch(`https://openapi.programming-hero.com/api/ai/tool/${handleId}`)
         .then(res=>res.json())
-        .then(data=>setModalData(data));
+        .then(data=>setModalData(data.data));
     },[handleId])
     
     return (
